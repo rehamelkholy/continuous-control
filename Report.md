@@ -26,7 +26,7 @@ The Deep Deterministic Policy Gradient (DDPG) Algorithm detailed in [this resear
 I started with the hyperparameters from the previous lesson, which were not very effective. Then I increased the batch size and decreased the discount factor, but that only made a slight difference. What really helped stabilize the training was: first, training on the whole episode at a time and removing the limit on time steps (which makes sense because it makes the agent learn more effectively about the entire episode), and, second, minimizing the standard diviation (sigma) of the OU Noise. 
 
 ### Agent Hyperparameters
-`
+```
 BUFFER_SIZE = int(1e6) # replay buffer size
 BATCH_SIZE = 256       # minibatch size
 GAMMA = 0.9            # discount factor
@@ -34,14 +34,14 @@ TAU = 1e-3             # for soft update of target parameters
 LR_ACTOR = 1e-3        # learning rate of the actor
 LR_CRITIC = 1e-3       # learning rate of the critic
 WEIGHT_DECAY = 0.0     # L2 weight decay
-`
+```
 
 ### Ornstein-Uhlenbeck Noise Hyperparameters
-`
+```
 mu = 0.0
 theta = 0.15
 sigma=0.01
-`
+```
 
 ## Model Architecture
 The Actor Network Class has only one fully-connected hidden layer, which I found to be more consistent than deeper architectures.
