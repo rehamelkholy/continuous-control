@@ -6,10 +6,10 @@ The Deep Deterministic Policy Gradient (DDPG) Algorithm detailed in [this resear
 - Randomly initialize critic network and actor.
 - Initialize target network.
 - Initialize replay buffer `R`.
-- **for** episode = 1, M **do**:
+- **for** episode = 1 to `M` **do**:
     - Initialize a random process for action exploration.
     - Receive initial observation states.
-    - **for** t = 1, T **do**:
+    - **for** t = 1 to `T` **do**:
         - Select action according to the current policy and exploration noise.
         - Execute action and observe reward and observe new state.
         - Store transition `R`.
