@@ -40,7 +40,7 @@ WEIGHT_DECAY = 0.0     # L2 weight decay
 ```
 mu = 0.0
 theta = 0.15
-sigma=0.01
+sigma = 0.01
 ```
 
 ## Model Architecture
